@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "axios";
 
+
 const Login = () => {
   const navigate = useNavigate();
 
@@ -16,29 +17,21 @@ const Login = () => {
 
   // }
 
-  const handleSignUp = async (e) => {
+  function handleSignUp(e) {
     e.preventDefault();
 
     let { email, password } = e.target;
 
-    let nmadr = await axios
-      .post(
-        "https://13.48.147.57/user/login",
-        {
-          // headers: {
-          //   "Content-Type": "application/json",
-          // },
-          // body: JSON.stringify({
-          email: email.value,
-          password: password.value,
-          // }),
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      )
+    fetch("http://13.48.147.57/user/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: email.value,
+        password: password.value,
+      }),
+    })
       .then((res) => res.json())
       .then((data) => {
         if (data.message) {
@@ -49,31 +42,11 @@ const Login = () => {
         }
       });
 
-    // fetch("http://13.48.147.57/user/login", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify({
-    //     email: email.value,
-    //     password: password.value,
-    //   }),
-    // })
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     if (data.message) {
-    //       toast(data.message, { type: "error" });
-    //     } else {
-    //       localStorage.setItem("token", data.token);
-    //       window.location = "/user-home";
-    //     }
-    //   });
-
     // let token = "qwerty";
 
     // localStorage.setItem("token_yes", token);
     // navigate("/");
-  };
+  }
 
   return (
     <>
@@ -81,7 +54,6 @@ const Login = () => {
         <section>
           <div className="portion rasm">
             <img src={logImg} alt="login" />
-            oz
           </div>
 
           <div className="portion form">
