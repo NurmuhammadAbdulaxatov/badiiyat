@@ -16,12 +16,12 @@ const Login = () => {
 
   // }
 
-  function handleSignUp(e) {
+  const handleSignUp = async (e) => {
     e.preventDefault();
 
     let { email, password } = e.target;
 
-    axios
+    let nmadr = await axios
       .post("http://13.48.147.57/user/login", {
         headers: {
           "Content-Type": "application/json",
@@ -65,7 +65,7 @@ const Login = () => {
 
     // localStorage.setItem("token_yes", token);
     // navigate("/");
-  }
+  };
 
   return (
     <>
