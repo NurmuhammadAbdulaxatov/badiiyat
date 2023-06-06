@@ -1,0 +1,213 @@
+.single-book {
+  margin-top: 40px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+
+  .book-img {
+    width: 519px;
+    height: 810px;
+    border: 1px solid #191919;
+
+    img {
+      border-radius: 15px;
+    }
+  }
+
+  .book-info {
+    margin-left: 40px;
+
+    h1 {
+      color: #c9ac8c;
+      font-family: Cinzel decorative;
+    }
+
+    .author {
+      color: #c9ac8c;
+      margin-top: 10px;
+    }
+
+    .page-count {
+      color: #ffffff60;
+      margin: 17px 0 17px 0;
+      font-family: handlee;
+
+      span {
+        color: white;
+        font-weight: 300;
+      }
+    }
+
+    .more-info {
+      margin-top: 35px;
+
+      .malumot-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        p {
+          color: #c9ac8c;
+          font-family: handlee;
+        }
+
+        span {
+          width: 80%;
+          height: 0.1px;
+          border: 0.5px solid #c9ac8c;
+        }
+      }
+
+      .malumot {
+        margin-top: 35px;
+
+        p {
+          letter-spacing: 1.3px;
+          line-height: 25px;
+          color: #ffffff90;
+          font-family: handlee, sans-serif;
+        }
+      }
+    }
+
+    .formats {
+      h4 {
+        color: #c9ac8c;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-family: handlee;
+      }
+
+      .format-types {
+        display: flex;
+        justify-content: space-between;
+
+        .format-book {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+
+          p {
+            margin-top: 5px;
+            font-family: handlee;
+          }
+
+          .format-price {
+            color: #ffffff90;
+            font-family: handlee;
+          }
+        }
+
+        button {
+          all: unset;
+          width: 150px;
+          height: 30px;
+          padding: 10px;
+          color: black;
+          cursor: pointer;
+          text-align: center;
+          font-family: handlee;
+          background-color: #c9ac8c;
+          transition: all 0.15s linear;
+
+          &:hover {
+            box-shadow: 0 0 10px #c9ac8c;
+          }
+        }
+      }
+    }
+  }
+}
+
+.comments {
+  display: flex;
+  margin-bottom: 50px;
+
+  .first-comment {
+    width: 650px;
+    height: 241px;
+    padding: 45px;
+    margin-top: 60px;
+    margin-right: 35px;
+    border-radius: 15px;
+    background: linear-gradient(263.94deg, #161616 0%, #1e1e1e 98.06%);
+
+    .sign {
+      top: 785px;
+      left: 130px;
+      color: #c9ac8c;
+      font-size: 250px;
+      position: absolute;
+      transform: rotate(180deg);
+      font-family: love ya like a sister;
+    }
+
+    .comment-text {
+      color: white;
+      font-size: 20px;
+      line-height: 30px;
+      font-family: handlee;
+    }
+  }
+
+  .second-comment {
+    width: 650px;
+    height: 241px;
+    padding: 45px;
+    display: flex;
+    margin-top: 60px;
+    align-items: center;
+    border-radius: 15px;
+    background: linear-gradient(263.94deg, #161616 0%, #1e1e1e 98.06%);
+
+    .sign {
+      top: 785px;
+      left: 770px;
+      color: #c9ac8c;
+      font-size: 250px;
+      position: absolute;
+      transform: rotate(180deg);
+      font-family: love ya like a sister;
+    }
+
+    .comment-text {
+      color: white;
+      font-size: 20px;
+      line-height: 30px;
+      font-family: handlee;
+    }
+  }
+}
+
+.book-recomidation {
+  .rec-title {
+    display: flex;
+    margin-bottom: 40px;
+    justify-content: space-between;
+
+    h3 {
+      color: #c9ac8c;
+      font-family: handlee;
+    }
+
+    .show-more {
+      color: white;
+      font-family: handlee;
+
+      a {
+        color: inherit;
+      }
+    }
+  }
+
+  .rec-books {
+    display: flex;
+    overflow: scroll;
+    margin-bottom: 100px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

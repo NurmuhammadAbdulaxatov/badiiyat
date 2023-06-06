@@ -1,0 +1,74 @@
+.portion {
+  flex: 1;
+}
+
+.login {
+  section {
+    display: flex;
+    height: 100vh;
+
+    .rasm {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #c9ac8c;
+    }
+
+    .form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+
+      form {
+        gap: 30px;
+        width: 400px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        h1 {
+          font-size: 40px;
+          font-weight: 900;
+          margin-right: 54%;
+        }
+
+        p {
+          margin-right: 30%;
+        }
+
+        input {
+          width: 90%;
+          padding: 15px;
+          border-radius: 10px;
+          border: 1px solid silver;
+          transition: all 0.177s linear;
+
+          &::placeholder {
+            color: silver;
+          }
+
+          &:hover {
+            box-shadow: 0 0 10px silver;
+          }
+        }
+
+        button {
+          all: unset;
+          width: 83%;
+          padding: 15px;
+          color: white;
+          text-align: center;
+          border-radius: 25px;
+          background-color: #152540;
+          transition: all 0.177s linear;
+
+          &:hover {
+            box-shadow: 0 0 10px #152540;
+          }
+        }
+      }
+    }
+  }
+}

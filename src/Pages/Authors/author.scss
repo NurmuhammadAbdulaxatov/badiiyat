@@ -1,0 +1,61 @@
+.author {
+  img {
+    margin-top: 50px;
+  }
+
+  .search {
+    left: 10%;
+    width: 87%;
+    z-index: 99;
+    padding: 30px;
+    margin-top: -70px;
+    position: relative;
+    border-radius: 15px;
+    background-color: #191919;
+    box-shadow: 0px 4px 77px 0px #00000040;
+
+    h2 {
+      color: #c9ac8c;
+      font-size: 31px;
+      text-align: center;
+      padding-bottom: 20px;
+      font-family: Cinzel decorative;
+    }
+
+    .input {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      input {
+        width: 60%;
+        border: none;
+        padding: 17px;
+        color: white;
+        border-radius: 15px;
+        background-color: #404040;
+        transition: all 0.2s linear;
+
+        &:hover {
+          box-shadow: 0 0 10px #404040;
+        }
+      }
+
+      button {
+        all: unset;
+        width: 10%;
+        padding: 16px;
+        cursor: pointer;
+        margin-left: 10px;
+        text-align: center;
+        border-radius: 15px;
+        background: #c9ac8c;
+        transition: all 0.2s linear;
+
+        &:hover {
+          box-shadow: 0 0 10px #c9ac8c;
+        }
+      }
+    }
+  }
+}
