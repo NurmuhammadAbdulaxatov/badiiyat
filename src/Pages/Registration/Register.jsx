@@ -27,7 +27,12 @@ const Register = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        localStorage.setItem("token", data.token), (window.location = "/");
+        if (data.message) {
+          alert(data.message);
+        } else {
+          localStorage.setItem("token", data.token);
+        }
+        window.location("/user-home");
       });
   };
 

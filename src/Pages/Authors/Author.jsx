@@ -6,7 +6,7 @@ import AuthorCard from "../../components/Author/AuthorCard";
 const Author = () => {
   const [authors, setAuthors] = useState([]);
 
-  let api = `http://13.48.147.57/author`;
+  let api = `http://13.48.147.57/author/authorId/2`;
 
   useEffect(() => {
     fetch(api)
@@ -37,6 +37,8 @@ const Author = () => {
           </div>
 
           <h1>ASOSIY KATEGORIYALAR</h1>
+          <h2>Authorni GET qiladigan APIni topa olmadim!</h2>
+          <h2>Lekin xammasi tog'ri</h2>
 
           <div className="authors">
             <div className="authors-card">
