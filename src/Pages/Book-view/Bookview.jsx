@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import Card from "../../components/Books/Card";
 import "./bookview.scss";
 import BookCard from "../../components/Single-book/BookCard";
+import Header from "../../components/Header/Header";
 
 const Bookview = () => {
   const [books, setBooks] = useState([]);
@@ -38,7 +39,7 @@ const Bookview = () => {
 
   return (
     <>
-      {/* <Card item={singleItem} /> */}
+      <Header />
       <div className="container">
         {singleItem?.length > 0 ? (
           singleItem.map((item, index) => {

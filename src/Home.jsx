@@ -37,6 +37,7 @@ const Home = () => {
 
   return (
     <>
+      <Header />
       <div className="container home">
         <div className="showcase">
           <img src={carousel} alt="badiiyat" />

@@ -10,6 +10,7 @@ import music from "../../assets/audio-palka.png";
 import track from "../../assets/track.png";
 import Card from "../../components/Books/Card";
 import { useNavigate } from "react-router-dom";
+import Header from "../../components/Header/Header";
 
 const UserHome = () => {
   const navigate = useNavigate();
@@ -44,6 +45,7 @@ const UserHome = () => {
 
   return (
     <>
+      <Header />
       <div className="user-home">
         <div className="container">
           <div className="user-info">

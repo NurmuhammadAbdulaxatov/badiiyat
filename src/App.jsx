@@ -4,14 +4,12 @@ import Home from "./Home";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Registration/Register";
 import Bookview from "./Pages/Book-view/Bookview";
-import Header from "./components/Header/Header";
 import Author from "./Pages/Authors/Author";
 import UserHome from "./Pages/UserHome/UserHome";
 
 function App() {
   return (
     <>
-      <Header />
 
       <Routes>
         <Route path="/" element={<Home />} />

@@ -6,7 +6,7 @@ import headerAvatar from "../../assets/header-avatar.png";
 const Header = () => {
   return (
     <>
-      <header>
+      <header >
         <div className="header-logo">
           <Link to={"/"}>
             <svg

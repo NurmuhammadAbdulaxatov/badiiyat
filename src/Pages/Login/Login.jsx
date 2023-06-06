@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logImg from "../../assets/login-rasm.png";
 import "./login.scss";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const navigate = useNavigate();
+
+  // let location = useLocation();
+
+  // console.log(location.pathname);
+
+  // if(location.pathname == "/login") {
+
+  // }
 
   function handleSignUp(e) {
     e.preventDefault();
@@ -23,7 +32,12 @@ const Login = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        localStorage.setItem("token", data.token), (window.location = "/");
+        if (data.message) {
+          toast(data.message, { type: "error" });
+        } else {
+          localStorage.setItem("token", data.token);
+          window.location = "/user-home";
+        }
       });
 
     // let token = "qwerty";

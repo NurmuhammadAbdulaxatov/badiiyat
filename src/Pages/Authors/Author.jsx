@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./author.scss";
 import carousel from "../../assets/home-carousel.png";
 import AuthorCard from "../../components/Author/AuthorCard";
+import Header from "../../components/Header/Header";
 
 const Author = () => {
   const [authors, setAuthors] = useState([]);
@@ -18,6 +19,7 @@ const Author = () => {
 
   return (
     <>
+      <Header />
       <div className="container">
         <div className="author">
           <img src={carousel} alt="badiiyat" />

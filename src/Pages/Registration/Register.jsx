@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import logImg from "../../assets/login-rasm.png";
 import "./register.scss";
 import { Link, json, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -28,11 +29,11 @@ const Register = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.message) {
-          alert(data.message);
+          toast(data.message, { type: "error" });
         } else {
           localStorage.setItem("token", data.token);
+          window.location = "/user-home";
         }
-        window.location("/user-home");
       });
   };
 
