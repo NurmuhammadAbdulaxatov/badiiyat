@@ -3,6 +3,7 @@ import logImg from "../../assets/login-rasm.png";
 import "./login.scss";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import axios from "axios";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -20,15 +21,16 @@ const Login = () => {
 
     let { email, password } = e.target;
 
-    fetch("http://13.48.147.57/user/login", {
+    axios({
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      url: "http://13.48.147.57/user/login",
       body: JSON.stringify({
         email: email.value,
         password: password.value,
       }),
+      headers: {
+        "Content-Type": "application/json",
+      },
     })
       .then((res) => res.json())
       .then((data) => {
@@ -39,6 +41,26 @@ const Login = () => {
           window.location = "/user-home";
         }
       });
+
+    // fetch("http://13.48.147.57/user/login", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({
+    //     email: email.value,
+    //     password: password.value,
+    //   }),
+    // })
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     if (data.message) {
+    //       toast(data.message, { type: "error" });
+    //     } else {
+    //       localStorage.setItem("token", data.token);
+    //       window.location = "/user-home";
+    //     }
+    //   });
 
     // let token = "qwerty";
 
