@@ -21,17 +21,16 @@ const Login = () => {
 
     let { email, password } = e.target;
 
-    axios({
-      method: "POST",
-      url: "http://13.48.147.57/user/login",
-      body: JSON.stringify({
-        email: email.value,
-        password: password.value,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
+    axios
+      .post("http://13.48.147.57/user/login", {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email.value,
+          password: password.value,
+        }),
+      })
       .then((res) => res.json())
       .then((data) => {
         if (data.message) {
