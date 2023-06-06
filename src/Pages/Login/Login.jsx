@@ -22,15 +22,23 @@ const Login = () => {
     let { email, password } = e.target;
 
     let nmadr = await axios
-      .post("http://13.48.147.57/user/login", {
-        // headers: {
-        //   "Content-Type": "application/json",
-        // },
-        // body: JSON.stringify({
-        email: email.value,
-        password: password.value,
-        // }),
-      })
+      .post(
+        "http://13.48.147.57/user/login",
+        {
+          // headers: {
+          //   "Content-Type": "application/json",
+          // },
+          // body: JSON.stringify({
+          email: email.value,
+          password: password.value,
+          // }),
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
       .then((res) => res.json())
       .then((data) => {
         if (data.message) {
@@ -73,7 +81,6 @@ const Login = () => {
         <section>
           <div className="portion rasm">
             <img src={logImg} alt="login" />
-            oz
           </div>
 
           <div className="portion form">
